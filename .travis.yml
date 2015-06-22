@@ -29,10 +29,10 @@ before_script:
 script:
     - date
     - ls -al
-    - touch Collatz.log
-    - make collatz-tests
+    - touch Netflix.log
+    - make netflix-tests
     - ls -al
-    - make Collatz.html
+    - make Netflix.html
     - ls -al
     - make test
     - ls -al

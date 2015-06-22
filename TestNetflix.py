@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 
-# -------------------------------
-# projects/collatz/TestCollatz.py
-# Copyright (C) 2015
-# Glenn P. Downing
-# -------------------------------
-
 # https://docs.python.org/3.4/reference/simple_stmts.html#grammar-token-assert_stmt
 
 # -------
@@ -15,35 +9,13 @@
 from io       import StringIO
 from unittest import main, TestCase
 
-from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve
+from Netflix import netflix_eval, netflix_solve
 
 # -----------
-# TestCollatz
+# TestNetflix
 # -----------
 
-class TestCollatz (TestCase) :
-    # ----
-    # read
-    # ----
-
-    def test_read (self) :
-        s    = "1 10\n"
-        i, j = collatz_read(s)
-        self.assertEqual(i,  1)
-        self.assertEqual(j, 10)
-
-    def test_read_2 (self) :
-        s    = "0 0\n"
-        i, j = collatz_read(s)
-        self.assertEqual(i,  0)
-        self.assertEqual(j,  0)
-
-    def test_read_3 (self) :
-        s    = "8000 67\n"
-        i, j = collatz_read(s)
-        self.assertEqual(i,  8000)
-        self.assertEqual(j,    67)
-
+class TestNetflix (TestCase) :
     # ----
     # eval
     # ----
@@ -63,34 +35,6 @@ class TestCollatz (TestCase) :
     def test_eval_4 (self) :
         v = collatz_eval(900, 1000)
         self.assertEqual(v, 174)
-
-    def test_eval_5 (self) :
-        v = collatz_eval(2, 2)
-        self.assertEqual(v, 2)
-
-    def test_eval_6 (self) :
-        v = collatz_eval(200, 100)
-        self.assertEqual(v, 125)
-
-
-    # -----
-    # print
-    # -----
-
-    def test_print (self) :
-        w = StringIO()
-        collatz_print(w, 1, 10, 20)
-        self.assertEqual(w.getvalue(), "1 10 20\n")
-
-    def test_print_2 (self) :
-        w = StringIO()
-        collatz_print(w, 100, 200, 0)
-        self.assertEqual(w.getvalue(), "100 200 0\n")
-
-    def test_print_3 (self) :
-        w = StringIO()
-        collatz_print(w, 2, 0, 3)
-        self.assertEqual(w.getvalue(), "2 0 3\n")
 
 
     # -----
