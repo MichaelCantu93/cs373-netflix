@@ -1,95 +1,41 @@
-FFFFFF
-======================================================================
-FAIL: test_eval_1 (__main__.TestNetflix)
+......
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "TestNetflix.py", line 25, in test_eval_1
-    self.assertEqual(v, '3.63')
-AssertionError: '3.72' != '3.63'
-- 3.72
-+ 3.63
+Ran 6 tests in 0.002s
 
-
-======================================================================
-FAIL: test_eval_2 (__main__.TestNetflix)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "TestNetflix.py", line 29, in test_eval_2
-    self.assertEqual(v, '3.23')
-AssertionError: '3.52' != '3.23'
-- 3.52
-?   -
-+ 3.23
-?    +
-
-
-======================================================================
-FAIL: test_eval_3 (__main__.TestNetflix)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "TestNetflix.py", line 33, in test_eval_3
-    self.assertEqual(v, '3.54')
-AssertionError: '3.63' != '3.54'
-- 3.63
-+ 3.54
-
-
-======================================================================
-FAIL: test_eval_4 (__main__.TestNetflix)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "TestNetflix.py", line 37, in test_eval_4
-    self.assertEqual(v, '4.66')
-AssertionError: '4.39' != '4.66'
-- 4.39
-+ 4.66
-
-
-======================================================================
-FAIL: test_solve (__main__.TestNetflix)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "TestNetflix.py", line 49, in test_solve
-    self.assertEqual(w.getvalue(), "1:\n3.63\n3.23\n3.54\nRMSE = 0.554\n")
-AssertionError: 'RMSE = 0.503\n' != '1:\n3.63\n3.23\n3.54\nRMSE = 0.554\n'
-+ 1:
-+ 3.63
-+ 3.23
-+ 3.54
-- RMSE = 0.503
-?           ^^
-+ RMSE = 0.554
-?           ^^
-
-
-======================================================================
-FAIL: test_solve_2 (__main__.TestNetflix)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "TestNetflix.py", line 55, in test_solve_2
-    self.assertEqual(w.getvalue(), "10:\n3.41\n3.15\n1000:\n3.60\n3.29\nRMSE = 0.502\n")
-AssertionError: 'RMSE = 0.464\n' != '10:\n3.41\n3.15\n1000:\n3.60\n3.29\nRMSE = 0.502\n'
-+ 10:
-+ 3.41
-+ 3.15
-+ 1000:
-+ 3.60
-+ 3.29
-- RMSE = 0.464
-?          ^^^
-+ RMSE = 0.502
-?          ^^^
-
-
-----------------------------------------------------------------------
-Ran 6 tests in 0.675s
-
-FAILED (failures=6)
-AVG MOVIE RATING:3.2281371945001274
-
-AVG USER RATINGS:3.674130451108087
-
-AVG MOVIE RATING:3.2281371945001274
-
-AVG USER RATINGS:3.674130451108087
-
+OK
+Name                                                                          Stmts   Miss Branch BrMiss  Cover   Missing
+-------------------------------------------------------------------------------------------------------------------------
+/usr/lib/python3/dist-packages/chardet/__init__                                  11      8      3      3    21%   23-32
+/usr/lib/python3/dist-packages/requests/__init__                                 26      5      0      0    81%   54, 72-75
+/usr/lib/python3/dist-packages/requests/adapters                                162    124     42     42    19%   39, 42, 45, 76-86, 89, 95-101, 114-118, 131-156, 167-192, 202-224, 232, 247-256, 270, 285-292, 305-396
+/usr/lib/python3/dist-packages/requests/api                                      22     12      0      0    45%   43-44, 54-55, 65-66, 76-77, 88, 99, 110, 120
+/usr/lib/python3/dist-packages/requests/auth                                    128    102     38     38    16%   31, 38, 44-45, 48-49, 55-56, 62-67, 71-150, 155-185, 189-196
+/usr/lib/python3/dist-packages/requests/certs                                     6      1      2      1    75%   24
+/usr/lib/python3/dist-packages/requests/compat                                   56     13      4      2    75%   86-99
+/usr/lib/python3/dist-packages/requests/cookies                                 213    156     96     96    18%   17-18, 34-36, 39, 42, 45, 50-56, 62, 65, 68, 72, 75, 78, 82, 86, 90, 105, 108, 111, 121-128, 133-135, 143-151, 180-183, 190-199, 204-205, 210, 215-216, 221, 226-227, 233, 237-241, 245-249, 254-259, 264-269, 276, 283, 287, 290-292, 296-300, 307-313, 320-331, 335-338, 342-344, 348-350, 359-385, 391-398, 423-432, 441-454
+/usr/lib/python3/dist-packages/requests/exceptions                               18      2      0      0    89%   23-24
+/usr/lib/python3/dist-packages/requests/hooks                                    18     14     10     10    14%   21-24, 32-45
+/usr/lib/python3/dist-packages/requests/models                                  383    321    170    170    11%   46-61, 72-88, 99-147, 154-160, 167-171, 209-226, 229, 233-245, 269-280, 286-296, 299, 302-309, 313-315, 320-381, 386-389, 398-442, 445-454, 460-476, 481-488, 492-493, 515-551, 556-559, 565-569, 572, 576, 580, 584, 588-592, 598, 607-637, 645-663, 669-687, 703-725, 733-741, 747-759, 764-773, 781
+/usr/lib/python3/dist-packages/requests/sessions                                232    188     85     85    14%   49-70, 80-86, 94-184, 192-209, 222-246, 272-316, 319, 322, 333-361, 407-457, 466-467, 476-477, 486-487, 497, 507, 517, 526, 532-588, 592-598, 602-603, 609-612, 615, 618-619, 625
+/usr/lib/python3/dist-packages/requests/status_codes                              8      0      6      0   100%   
+/usr/lib/python3/dist-packages/requests/structures                               55     28     14     14    39%   19, 23, 26-31, 34, 66-69, 74, 77, 80, 83, 86, 90, 97-102, 106, 109, 120, 125, 128
+/usr/lib/python3/dist-packages/requests/utils                                   314    258    136    136    12%   42-45, 49-65, 71-111, 116-118, 135-141, 157-166, 192-197, 222-231, 242-256, 265-270, 280-282, 291-295, 306-317, 323-335, 340-343, 361-376, 389-404, 416, 425-429, 437-438, 442-446, 451-466, 473-512, 516-519, 524-548, 554, 568-592, 605-627, 633-636, 642-649, 658-668
+/usr/lib/python3/dist-packages/six                                              325    161    106     76    45%   44-66, 102, 114-119, 129-131, 143, 152-155, 377, 385, 390-396, 413-424, 429-431, 437-439, 444, 450-461, 476, 480, 484, 488, 493, 495, 498-499, 510-524, 534-552, 559-610, 617, 621-632
+/usr/lib/python3/dist-packages/urllib3/__init__                                  27     11      0      0    59%   33-36, 49-55
+/usr/lib/python3/dist-packages/urllib3/_collections                              49     33     10     10    27%   12-13, 39-43, 47-50, 53-65, 68-72, 75-76, 79, 82-90, 93-94
+/usr/lib/python3/dist-packages/urllib3/connectionpool                           271    214     79     79    16%   16-18, 22-24, 37-38, 43-44, 99-104, 108-140, 157-160, 163, 227-251, 257-275, 289-314, 330-343, 347-355, 373-431, 438-447, 454-464, 535-636, 667-675, 683-703, 709-734, 757-761
+/usr/lib/python3/dist-packages/urllib3/contrib/__init__                           0      0      0      0   100%   
+/usr/lib/python3/dist-packages/urllib3/contrib/pyopenssl                        219    218     68     68     1%   24-350
+/usr/lib/python3/dist-packages/urllib3/exceptions                                50     18      2      2    62%   18-19, 23, 29-30, 34, 58-66, 73-75, 118-121
+/usr/lib/python3/dist-packages/urllib3/fields                                    68     56     29     29    12%   22-24, 40-52, 69-74, 93-107, 118, 131-140, 146-159, 174-177
+/usr/lib/python3/dist-packages/urllib3/filepost                                  39     27     20     20    20%   24, 35-44, 60-63, 77-101
+/usr/lib/python3/dist-packages/urllib3/packages/__init__                          2      0      0      0   100%   
+/usr/lib/python3/dist-packages/urllib3/packages/ssl_match_hostname/__init__      46     40     34     34     8%   15-57, 68-97
+/usr/lib/python3/dist-packages/urllib3/poolmanager                               98     72     28     28    21%   11-12, 66-68, 79-86, 95, 105-121, 132-133, 144-171, 204-217, 221-225, 233-241, 245-255, 259
+/usr/lib/python3/dist-packages/urllib3/request                                   31     19      8      8    31%   9-10, 51, 56, 70-77, 86-88, 128-141
+/usr/lib/python3/dist-packages/urllib3/response                                 137    108     58     58    15%   23-25, 28, 31-43, 47-50, 82-101, 111-114, 117-121, 126-130, 155-206, 224-228, 242-255, 266, 269, 273-274, 278-285, 288-293, 297-298, 301
+/usr/lib/python3/dist-packages/urllib3/util                                     227    180    107    106    14%   17-22, 32-33, 48, 116-119, 122, 137-158, 174, 188, 197-200, 210-213, 225-231, 250-262, 273, 278, 283-288, 293-295, 314-328, 353-408, 415-416, 448-468, 481-502, 516-525, 532-541, 556-576, 587-592, 606-626
+Netflix                                                                          41      0      6      0   100%   
+TestNetflix                                                                      28      0      2      1    97%   
+-------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                          3310   2389   1163   1116    22%   

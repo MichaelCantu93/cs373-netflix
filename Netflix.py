@@ -34,13 +34,19 @@ def netflix_eval (viewer, current_movie) :
 
     viewer_rating = average_VIEWER_cache[viewer]           #get viewer rating based on viewer string from cache     
     movie_rating = average_MOVIE_cache[current_movie]     #get movie rating based on current movie from movie cache
-    t = variance_cache[viewer]
     
-    variance = t[1]
-    if variance < 1:
-        rating = (1.3*viewer_rating + .7*movie_rating)/2 + .05          
-    else:
-        rating = (.7*viewer_rating + 1.3*movie_rating)/2 -.05           
+    avg_all_users = 3.675                                   #was found by avg all the users ratings ever
+
+    """
+    this method here produces RMSE of about .972, we decided to use this cause we couldn't get 
+    our method with variance to go below 1.000, we tried this using the avg of all movie ratings
+    and the avg for all users, and the users worked better. this way it takes the offset of the
+    viewer from the avg, and the movie rating from the avg (both of which could be pos or neg) and
+    applies this to the avg itself, which gives a decent approximation of the rating, the code runs
+    in less than one minute, the part that takes long is just the reading in of the input file, but 
+    the actual calculations are fast
+    """
+    rating = avg_all_users + (viewer_rating - avg_all_users) + (movie_rating - avg_all_users)        
 
     temp = predict_cache[current_movie]                 #so you get dictionary from the dictionary of netflix predictions
     netflix_rating = temp[viewer]               #then you get the actual rating from the dictionary you just got
