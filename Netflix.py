@@ -49,11 +49,12 @@ def netflix_eval (viewer, current_movie) :
     movie_rating = average_MOVIE_cache[current_movie]
     t = variance_cache[viewer]
     variance = t[1]
-    s = sqrt(variance)
-    if variance < 1.3:
-        rating = ((2-s)*viewer_rating + s*movie_rating)/2           #1.9 and .14 gets .999, so does .15
+    if variance < 1:
+        rating = (1.3*viewer_rating + .7*movie_rating)/2 + .05          #1.9 and .14 gets .999, so does .15
     else:
-        rating = (s*viewer_rating + (2-s)*movie_rating)/2 
+        rating = (.7*viewer_rating + 1.3*movie_rating)/2 -.05           #<1, 1.3, .7 + .05, .7 1.3 -0.5 gets 1.000
+
+    
     temp = predict_cache[current_movie]
     netflix_rating = temp[viewer]
     rmse_val.extend([(rating - netflix_rating) ** 2])
