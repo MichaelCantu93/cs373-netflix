@@ -21,20 +21,20 @@ class TestNetflix (TestCase) :
     # ----
 
     def test_eval_1 (self) :
-        v = netflix_eval("1")
-        self.assertEqual(v, 3.749542961608775)
+        v = netflix_eval("30878", "1")
+        self.assertEqual(v, '3.63')
         
     def test_eval_2 (self) :
-        v = netflix_eval("2")
-        self.assertEqual(v, 3.5586206896551724)
+        v = netflix_eval("2647871", "1")
+        self.assertEqual(v, '3.23')
     
     def test_eval_3 (self) :
-        v = netflix_eval("3")
-        self.assertEqual(v, 3.6411530815109345)
+        v = netflix_eval("1283744", "1")
+        self.assertEqual(v, '3.54')
     
     def test_eval_4 (self) :
-        v = netflix_eval("4")
-        self.assertEqual(v, 2.73943661971831)
+        v = netflix_eval("2488120", "1")
+        self.assertEqual(v, '4.66')
 
 
 
@@ -43,16 +43,16 @@ class TestNetflix (TestCase) :
     # -----
 
     def test_solve (self) :
-        r = StringIO("1:\n100 200\n201 210\n900 1000\n")
+        r = StringIO("1:\n30878\n2647871\n1283744\n")
         w = StringIO()
         netflix_solve(r, w)
-        self.assertEqual(w.getvalue(), "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
+        self.assertEqual(w.getvalue(), "1:\n3.63\n3.23\n3.54\nRMSE = 0.554\n")
 
     def test_solve_2 (self) :
-        r = StringIO("1:\n200 100\n900 1000\n10 1\n")
+        r = StringIO("10:\n1952305\n1531863\n1000:\n2326571\n977808\n")
         w = StringIO()
         netflix_solve(r, w)
-        self.assertEqual(w.getvalue(), "2 2 2\n200 100 125\n900 1000 174\n10 1 20\n")
+        self.assertEqual(w.getvalue(), "10:\n3.41\n3.15\n1000:\n3.60\n3.29\nRMSE = 0.502\n")
 
 
 # ----

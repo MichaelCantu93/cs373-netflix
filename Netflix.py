@@ -61,3 +61,6 @@ def netflix_solve (r, w) :
             current_movie = current_movie[:-2]
             w.write(current_movie + ":\n")
     w.write("RMSE = " + str('%.3f' % round(sqrt(reduce(add, rmse_val, 0)/count), 3)) + "\n")
+
+
+
