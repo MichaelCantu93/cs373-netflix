@@ -62,25 +62,3 @@ class TestNetflix (TestCase) :
 if __name__ == "__main__" :
     main()
 
-"""
-% coverage3 run --branch TestCollatz.py >  TestCollatz.out 2>&1
-
-
-
-% coverage3 report -m                   >> TestCollatz.out
-
-
-
-% cat TestCollatz.out
-.......
-----------------------------------------------------------------------
-Ran 7 tests in 0.001s
-
-OK
-Name          Stmts   Miss Branch BrMiss  Cover   Missing
----------------------------------------------------------
-Collatz          18      0      6      0   100%
-TestCollatz      33      1      2      1    94%   79
----------------------------------------------------------
-TOTAL            51      1      8      1    97%
-"""

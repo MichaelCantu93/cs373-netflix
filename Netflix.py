@@ -39,11 +39,13 @@ def netflix_eval (viewer, current_movie) :
     global count
     if "\n" in viewer:
         viewer = viewer[:-1]
+    assert "\n" not in viewer
     rating = average_cache[viewer]      #simplest will use the users average ratings
     temp = predict_cache[current_movie]
     netflix_rating = temp[viewer]
     rmse_val.extend([(rating - netflix_rating) ** 2])
     count = count + 1
+    assert count is not 0
     return '%.2f' % round(rating, 2)
 
 
@@ -52,13 +54,16 @@ def netflix_eval (viewer, current_movie) :
 # ------------
 def netflix_solve (r, w) :
     current_movie = ""
+    assert type(current_movie) is str
     for s in r :
         if ":" not in s:
-            v    = netflix_eval(s, current_movie)
-            w.write(str(v) + "\n")
+            v    = netflix_eval(s, current_movie)            
+            assert type(v) is str
+            w.write(v + "\n")
         else:
             current_movie = s
             current_movie = current_movie[:-2]
+            assert type(current_movie) is str
             w.write(current_movie + ":\n")
     w.write("RMSE = " + str('%.3f' % round(sqrt(reduce(add, rmse_val, 0)/count), 3)) + "\n")
 
