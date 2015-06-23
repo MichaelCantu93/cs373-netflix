@@ -36,7 +36,7 @@ rmse_val = []
 count = 0
 
 
-# ------------
+# ------------ 
 # netflix_eval
 # ------------
 def netflix_eval (viewer, current_movie) :
@@ -48,13 +48,14 @@ def netflix_eval (viewer, current_movie) :
     viewer_rating = average_VIEWER_cache[viewer]      
     movie_rating = average_MOVIE_cache[current_movie]
     t = variance_cache[viewer]
+    """
     variance = t[1]
     if variance < 1:
         rating = (1.3*viewer_rating + .7*movie_rating)/2 + .05          #1.9 and .14 gets .999, so does .15
     else:
         rating = (.7*viewer_rating + 1.3*movie_rating)/2 -.05           #<1, 1.3, .7 + .05, .7 1.3 -0.5 gets 1.000
-
-    
+    """
+    rating = (3.675 + (viewer_rating - 3.675) + (movie_rating - 3.675))
     temp = predict_cache[current_movie]
     netflix_rating = temp[viewer]
     rmse_val.extend([(rating - netflix_rating) ** 2])
@@ -81,6 +82,18 @@ def netflix_solve (r, w) :
             assert type(current_movie) is str
             #w.write(current_movie + ":\n")
     w.write("RMSE = " + str('%.3f' % round(sqrt(reduce(add, rmse_val, 0)/count), 3)) + "\n")
+    sum = 0
+    ac = 0
+    for k,v in average_MOVIE_cache.items():
+        sum = sum + v
+        ac = ac + 1
+    print("AVG MOVIE RATING:" + str(sum/ac) + "\n")
 
+    sum = 0
+    ac = 0
+    for g,b in average_VIEWER_cache.items():
+        sum = sum + b
+        ac = ac + 1
+    print("AVG USER RATINGS:" + str(sum/ac) + "\n")
 
 
