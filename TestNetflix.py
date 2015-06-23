@@ -46,13 +46,13 @@ class TestNetflix (TestCase) :
         r = StringIO("1:\n30878\n2647871\n1283744\n")
         w = StringIO()
         netflix_solve(r, w)
-        self.assertEqual(w.getvalue(), "1:\n3.63\n3.23\n3.54\nRMSE = 0.554\n")
+        self.assertEqual(w.getvalue(), "1:\n3.63\n3.23\n3.54\nRMSE = 0.581\n")
 
     def test_solve_2 (self) :
         r = StringIO("10:\n1952305\n1531863\n1000:\n2326571\n977808\n")
         w = StringIO()
         netflix_solve(r, w)
-        self.assertEqual(w.getvalue(), "10:\n3.41\n3.15\n1000:\n3.60\n3.29\nRMSE = 0.502\n")
+        self.assertEqual(w.getvalue(), "10:\n3.41\n3.15\n1000:\n3.60\n3.29\nRMSE = 0.485\n")
 
 
 # ----
