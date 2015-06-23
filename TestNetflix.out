@@ -5,7 +5,7 @@ Ran 6 tests in 0.001s
 OK
 Name          Stmts   Miss Branch BrMiss  Cover   Missing
 ---------------------------------------------------------
-Netflix          41      0      6      0   100%   
+Netflix          44      1      8      1    96%   34
 TestNetflix      28      0      2      1    97%   
 ---------------------------------------------------------
-TOTAL            69      0      8      1    99%   
+TOTAL            72      1     10      2    96%   

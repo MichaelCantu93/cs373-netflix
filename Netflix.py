@@ -30,6 +30,9 @@ def netflix_eval (viewer, current_movie) :
     global count                            #had to reference as global in here or error occurred 
     if "\n" in viewer:                      #need to remove new line from the viewer string so it can be used as index
         viewer = viewer[:-1]
+    if "\r" in viewer:
+        viewer = viewer[:-1]
+    assert "\r" not in viewer
     assert "\n" not in viewer
 
     viewer_rating = average_VIEWER_cache[viewer]           #get viewer rating based on viewer string from cache     
