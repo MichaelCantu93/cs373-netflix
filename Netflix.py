@@ -57,7 +57,7 @@ def netflix_eval (viewer, current_movie) :
     count = count + 1                                 #increase count for mean
     assert count is not 0
 
-    return '%.2f' % round(rating, 2)                 #return the rating with rounding to 2 decimal places
+    return '%.1f' % round(rating, 1)                 #return the rating with rounding to 2 decimal places
 
 
 # ------------
@@ -77,6 +77,6 @@ def netflix_solve (r, w) :
             assert type(current_movie) is str
             w.write(current_movie + ":\n")       #write it to output
     #at end write the rmse to output, used reduce with add and seed at 0, also rounded to 2 decimal places
-    w.write("RMSE = " + str('%.2f' % round(sqrt(reduce(add, rmse_val, 0)/count), 2)) + " (two decimal places)" + "\n")
+    w.write("RMSE: " + str('%.2f' % round(sqrt(reduce(add, rmse_val, 0)/count), 2)) + " (two decimal places)" + "\n")
 
 
