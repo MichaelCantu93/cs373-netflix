@@ -1,0 +1,161 @@
+commit 9fbc5bd8043690247c5ebe432d3d0f4bc99e7535
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Mon Jun 29 16:51:19 2015 -0500
+
+    added formatting to RMSE
+
+commit 423b4fe742e06c7e9c7db7a426c143591bd481d7
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Mon Jun 29 16:46:54 2015 -0500
+
+    added html and log
+
+commit a457fdc452a50577c29d3ba912a5d4ca4fcc12a4
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Tue Jun 23 22:44:55 2015 -0500
+
+    changed RMSE to 2 decimal places, had three before
+
+commit 5202aff713ea78a403941bc987944eaa057da2a9
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Tue Jun 23 18:39:05 2015 -0500
+
+    added log and html
+
+commit 587d067858df041986e148c3a4830558ff9484e0
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Tue Jun 23 18:38:06 2015 -0500
+
+    have the files ready for public repo and the cache code with RMSE under 1 already
+
+commit 19ef609c500d25734b0d6319cab70b043cd27376
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Tue Jun 23 18:16:31 2015 -0500
+
+    fixed TestNeflix.out file
+
+commit 8d5297993096ea213a1768a381b07784d6513db1
+Author: Michael Cantu <michaelcantu93@gmail.com>
+Date:   Tue Jun 23 18:11:46 2015 -0500
+
+    added test cases and fixed the rmse on the program, fixed issues #20 and #12
+
+commit 4ae46c3d2776ef541fe87c2c3dbb4d47b3e8fb36
+Author: Michael Cantu <michaelcantu93@gmail.com>
+Date:   Tue Jun 23 15:24:22 2015 -0500
+
+    Delete .travis.yml~
+
+commit 655811f997bfe38c75b8d8c100ee054c05dc4d7a
+Author: Michael Cantu <michaelcantu93@gmail.com>
+Date:   Tue Jun 23 15:24:18 2015 -0500
+
+    Delete Netflix.py~
+
+commit 8f31bb4bea24706ae1b58042818a9c804685768f
+Author: Michael Cantu <michaelcantu93@gmail.com>
+Date:   Tue Jun 23 15:24:05 2015 -0500
+
+    Delete TestNetflix.py~
+
+commit e524b5039f166959c9d5b2698febe20841fb99da
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Tue Jun 23 14:49:12 2015 -0500
+
+    added inline comments, fixed issue #21
+
+commit e7f111e8cd133463abc235db77a43f44b76ad303
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Tue Jun 23 14:27:52 2015 -0500
+
+    took average of all movie ratings and user ratings total, movie was 3.228, users 3.675
+
+commit de4c160fa5ebff4e9d38a62b1097d4c5a4346300
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Tue Jun 23 14:26:05 2015 -0500
+
+    took average of all movie ratings and user ratings total, movie was 3.228, users 3.675
+
+commit 4fc3f49c4725ee3466b5702ee9979dcc633fc4c0
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Tue Jun 23 13:54:20 2015 -0500
+
+    RMSE at 1.000 using variance, issue #19
+
+commit 5683b904835bf0a25ce41cc093ccee4882932cdc
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Mon Jun 22 23:08:52 2015 -0500
+
+    getting 1.001 RSME with variance added now
+
+commit cbdc5ff34bd113053d99ee34ef7bbcc62486fe8f
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Mon Jun 22 20:42:46 2015 -0500
+
+    added assertions to file
+
+commit c87b8635de95935abeed63d4fab9740c1020cf0e
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Mon Jun 22 20:23:24 2015 -0500
+
+    travis is now passing, sure whatever
+
+commit 54132ccb9a60980cec6959389cb0036b42be64c2
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Mon Jun 22 20:20:49 2015 -0500
+
+    added requests to pip install in travis
+
+commit 5ac8f80d3caba7b344ab07afa7f5277bd60cb90a
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Mon Jun 22 20:16:02 2015 -0500
+
+    1
+
+commit 815bf8e885d72aa63f47814411dd8420f5bae32e
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Mon Jun 22 20:03:54 2015 -0500
+
+    changed tests for travis maybe idk
+
+commit 3ce2731dae3408121d265481eaa7de7875125724
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Mon Jun 22 19:50:31 2015 -0500
+
+    wrote the unit tests we need so far, fixed issue #7
+
+commit 8d647a9434bc873727f001fe854bdfc3f7f83f30
+Author: Michael Cantu <mc44696@cs.utexas.edu>
+Date:   Mon Jun 22 19:15:32 2015 -0500
+
+    netflix code runs, cache's import works, fixed issue #8 and #15
+
+commit f1caf2ff93e095f81f8338f270f0642e574678f8
+Author: Michael Cantu <michaelcantu93@gmail.com>
+Date:   Mon Jun 22 17:37:13 2015 -0500
+
+    fixed a few unit tests
+
+commit 73df41e9d43fcaf3517b38fb543da7e7ae454e6b
+Author: Michael Cantu <michaelcantu93@gmail.com>
+Date:   Mon Jun 22 17:16:27 2015 -0500
+
+    cache import issue still not resolved, trying options
+
+commit e6a3f949f191197dfa5086d224d5317c4c7963de
+Author: Michael Cantu <michaelcantu93@gmail.com>
+Date:   Mon Jun 22 15:52:47 2015 -0500
+
+    have foundation for Netflix.py right now
+
+commit 7b46a213c745da16e21ceeb89c8386ad04bce5d4
+Author: Michael Cantu <michaelcantu93@gmail.com>
+Date:   Mon Jun 22 12:01:49 2015 -0500
+
+    added all files needed, changed makefile and filenames
+
+commit a4ed295342d3974c9c28c0e0a04028b52c691885
+Author: Michael Cantu <michaelcantu93@gmail.com>
+Date:   Sun Jun 21 13:05:19 2015 -0500
+
+    Initial commit
