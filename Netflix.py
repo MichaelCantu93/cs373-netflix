@@ -77,6 +77,6 @@ def netflix_solve (r, w) :
             assert type(current_movie) is str
             w.write(current_movie + ":\n")       #write it to output
     #at end write the rmse to output, used reduce with add and seed at 0, also rounded to 2 decimal places
-    w.write("RMSE = " + str('%.2f' % round(sqrt(reduce(add, rmse_val, 0)/count), 2)) + "\n")
+    w.write("RMSE = " + str('%.2f' % round(sqrt(reduce(add, rmse_val, 0)/count), 2)) + " (two decimal places)" + "\n")
 
 
